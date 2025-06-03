@@ -40,38 +40,39 @@ void start()
         tab[pos1+1][pos2+1]='~';
         tab[pos1+2][pos2+1]='~';
     }
-    // 5broto
+    // 5 broto
+    cont = 0;
     while(cont<5)
     {
         pos1=rand()%25;
         pos2=rand()%50;
-        if (tab[pos1][pos2]=' ')
+        if (tab[pos1][pos2]==' ')
         {
             tab[pos1][pos2]='t';
             cont++;
         }
     }
     cont=0;
-    //11raposas
+    // 11 raposas
     while(cont<11)
     {
         pos1=rand()%25;
         pos2=rand()%50;
-        if(tab[pos1][pos2]=' ')
+        if(tab[pos1][pos2]==' ')
         {
             tab[pos1][pos2]='R';
             cont++;
         }
     }
     cont=0;
-    //5 cabras
+    // 5 cabras
     while(cont<5)
     {
         pos1=rand()%25;
         pos2=rand()%50;
-        if (tab[pos1][pos2]=' ')
+        if (tab[pos1][pos2]==' ')
         {
-            tab[pos1][pos2]=("%c",cabra);
+            tab[pos1][pos2]=cabra;
             cont++;
         }
     }
@@ -140,23 +141,27 @@ void fertilizar()
                 jog++;
                 farinha--;
                 rpss++;
-                system("cls");
+                // system("cls"); // Comando do Windows, comentar para Linux
+                // system("clear"); // Descomente para limpar tela no Linux
             }
             else
             {
-                system("cls");
+                // system("cls");
+                // system("clear");
                 printf("\n                                            Coordenada n%co possui trigo(t)\n\n\a",160);
             }
         }
         else
         {
-            system("cls");
+            // system("cls");
+            // system("clear");
             printf("\n                                         Coordenadas Inv%clidas\n\n\a",160);
         }
     }
     else
     {
-        system("cls");
+        // system("cls");
+        // system("clear");
         printf("\n                                         Sem saldo de Farinha\n\n\a");
     }
 }
@@ -172,17 +177,20 @@ void colher()
             jog++;
             trigo++;
             rpss++;
-            system("cls");
+            // system("cls");
+            // system("clear");
         }
         else
         {
-            system("cls");
+            // system("cls");
+            // system("clear");
             printf("\n                                                 Coordenada N%co Possui Trigo para colher(T)\n\n\a",198);
         }
     }
     else
     {
-        system("cls");
+        // system("cls");
+        // system("clear");
         printf("\n                                         Coordenadas Inv%clidas\n\n\a",160);
     }
 }
@@ -198,17 +206,20 @@ void ordenhar()
             jog++;
             leite++;
             rpss++;
-            system("cls");
+            // system("cls");
+            // system("clear");
         }
         else
         {
-            system("cls");
+            // system("cls");
+            // system("clear");
             printf("\n                                            Coordenada N%co Possui Cabra Sem Chifre(U)\n\n\a",198);
         }
     }
     else
     {
-        system("cls");
+        // system("cls");
+        // system("clear");
         printf("\n                                         Coordenadas Inv%clidas\n\n\a",160);
     }
 }
@@ -228,20 +239,23 @@ void alimentar()
                 jog++;
                 leite--;
                 cont++;
-                system("cls");
+                // system("cls");
+                // system("clear");
             }
             else
             {
-                system("cls");
+                // system("cls");
+                // system("clear");
                 printf("\n                                                              Coordenada N%co Possui Leite(u)\n\n\a",198);
             }
         }
         else
         {
-            system("cls");
+            // system("cls");
+            // system("clear");
             printf("\n                                                              Coordenada N%co Cabra ou Cabrita(u/%c)\n\n\a",198,-102);
         }
-        //Cabra Ü
+        //Cabra ï¿½
         if((tab[lin][col]==cabra) &&(tab[lin][col+2]==' ')&&(tab[lin][col+1]==cabra)&& (cont==0))
         {
             if(trigo>0)
@@ -249,23 +263,27 @@ void alimentar()
                 tab[lin][col+2]='u';
                 jog++;
                 trigo--;
-                system("cls");
+                // system("cls");
+                // system("clear");
             }
             else
             {
-                system("cls");
+                // system("cls");
+                // system("clear");
                 printf("\n                                                              Coordenada N%co Possui Trigo(T)\n\n\a",198);
             }
         }
         else
         {
-            system("cls");
+            // system("cls");
+            // system("clear");
             printf("\n                                                              Coordenada N%co Possui Cabra a direita ou Posic%co Livre 2 casas a direita (u/%c)\n\n\a",198,198,-102);
         }
     }
     else
     {
-        system("cls");
+        // system("cls");
+        // system("clear");
         printf("\n                                                           Coordenadas Inv%clidas\n\n\a",160);
     }
 }
@@ -296,18 +314,21 @@ void mover()
                     tab[lin][col]=' ';
                     jog++;
                     cont++;
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                 }
                 else
                 {
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                     printf("\n                                                     Posi%c%co N%co %c Vizinha\n\n\a",135,198,198,130);
                 }
             }
             else
             {
-                system("cls");
-                printf("\n                                                     Coordenadas Inv%lidas\n\n\a",160);
+                // system("cls");
+                // system("clear");
+                printf("\n                                                     Coordenadas Inv%clidas\n\n\a",160);
             }
         }
         //cabrita U
@@ -330,21 +351,24 @@ void mover()
                     tab[lin][col]=' ';
                     jog++;
                     cont++;
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                 }
                 else
                 {
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                     printf("\n                                                     Posi%c%co N%co %c Vizinha\n\n\a",135,198,198,130);
                 }
             }
             else
             {
-                system("cls");
-                printf("\n                                                     Coordenadas Inv%lidas\n\n\a",160);
+                // system("cls");
+                // system("clear");
+                printf("\n                                                     Coordenadas Inv%clidas\n\n\a",160);
             }
         }
-        //cabrita Ü
+        //cabrita ï¿½
         if(tab[lin][col]==cabra)
         {
             printf("                                     Linha,Coluna: ");
@@ -364,11 +388,13 @@ void mover()
                     tab[lin][col]=' ';
                     jog++;
                     cont++;
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                 }
                 else
                 {
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                     printf("\n                                                     Posi%c%co N%co %c Vizinha\n\n\a",135,198,198,130);
                 }
             }
@@ -392,24 +418,28 @@ void mover()
                     rpss++;
                     farinha++;
                     cont++;
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                 }
                 else
                 {
-                    system("cls");
+                    // system("cls");
+                    // system("clear");
                     printf("\n                                                     Posi%c%co N%co %c Vizinha\n\n\a",135,198,198,130);
                 }
             }
         }
         if(cont==0)
         {
-            system("cls");
-            printf("\n                                                        Coordenada N%co Possui Cabras V%clidas(u/U/%c)\n\n\a",198,160,-102,160);
+            // system("cls");
+            // system("clear");
+            printf("\n                                                        Coordenada N%co Possui Cabras V%clidas(u/U/%c)\n\n\a",198,160,-102);
         }
     }
     else
     {
-        system("cls");
+        // system("cls");
+        // system("clear");
         printf("\n                                                            Coordenadas inv%clidas\n\n\a",160);
     }
 }
@@ -440,7 +470,7 @@ void noite()
         }
     }
     cont=0;
-    //evoluções
+    //evoluï¿½ï¿½es
     for (int i=0; i<25; i++)
     {
         for(int j=0; j<50; j++)
@@ -468,7 +498,8 @@ void noite()
 }
 void ajuda()
 {
-    system("cls");
+    // system("cls");
+    // system("clear");
     printf("                                                                  INSTRU%c%cES PARA JOGAR\n\n\n",128,229);
     printf("                                                        OBJETIVO DO JOGO ALCAN%cAR 100 PONTOS NO O.C\n\n",128);
     printf("            R= Raposa     %c= Lama     u= Cabrita     U= Cabra S/Chifre     %c= Cabra C/Chifre     t= Broto de Trigo     T= Trigo    R.E= Raposas Eliminadas\n\n\n",126,cabra);
@@ -488,7 +519,7 @@ void ajuda()
     printf("                                    *- 1 Leite;\n\n\n");
     printf("                                Cabra C/Chifre(%c):\n\n",cabra);
     printf("                                    *Necessita de Saldo de Trigo;\n");
-    printf("                                    *Necessita de Posi%%o Livres a Direta;\n",135,198);
+    printf("                                    *Necessita de Posi%%o Livres a Direta;\n");
     printf("                                    *Cabra C/Chifre Selecionada Evolui Para Cabrita (u);\n");
     printf("                                    *- 1 Trigo;\n\n\n");
     printf("                          Movimentar Cabrita(u), Cabra S/Chifre(u) Cabra C/Chifre(%c): \n\n",cabra);
@@ -511,21 +542,25 @@ int main(int argc, char *argv[])
     start();
     ajuda();
     getchar();
-    system("cls");
+    // system("cls");
+    // system("clear");
     while(mov!='s')
     {
         if(jog>0&&jog<8)
         {
-            system("color f1");
+            // system("color f1"); // Comando do Windows, comentar para Linux
         }
         else
         {
-            system("color 06");
+            // system("color 06");
             jog=0;
             noite();
         }
         tela();
-        mov=getch();
+        // mov=getch(); // getch() Ã© do Windows, substitua por getchar()
+        mov=getchar();
+        // Limpar buffer extra do getchar()
+        while(getchar()!='\n');
         switch(mov)
         {
         case 'f'://fertilziar
@@ -546,16 +581,19 @@ int main(int argc, char *argv[])
         case '?':
             ajuda();
             jog--;
-            system("cls");
+            // system("cls");
+            // system("clear");
         case 'n'://next(oculto do usuario)
             jog++;
             leite++;
             farinha++;
             trigo++;
-            system("cls");
+            // system("cls");
+            // system("clear");
             break;
         default:
-            system("cls");
+            // system("cls");
+            // system("clear");
             printf("                                                                  Op%c%co Inv%clida\a",135,198,160 );
         }
         if(rpss==100)
@@ -563,7 +601,8 @@ int main(int argc, char *argv[])
             mov='s';
         }
     }
-    system("cls");
+    // system("cls");
+    // system("clear");
     if(rpss==100)
     {
         printf("                                                              Parab%cns Vo%c%c Alcan%cou o Obejtivo\n",130,135,136,128);
